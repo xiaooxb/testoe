@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="id">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<head>
-  <title> THIS PROJECT UNDER WORK</title>
+  <title>THIS PROJECT UNDER WORK</title>
 </head>
 <body>
-<p> UNDER PROJECT, NIKMATI SAJA ANIMASI ROBLOX DIBAWAH INI</p>
+  <p>UNDER PROJECT, NIKMATI SAJA ANIMASI ROBLOX DIBAWAH INI</p>
   <img src="image0.gif" alt="roblox">
-  <audio id="dance" controls autoplay loop>
-        <source src="dance.mp3" type="audio/mpeg">
-        Browser tidak mendukung audio.
+
+  <!-- Audio dengan loop -->
+  <audio id="dance" loop>
+    <source src="dance.mp3" type="audio/mpeg">
+    Browser tidak mendukung audio.
   </audio>
+
   <footer>
     ©ZevXB
   </footer>
+
+  <!-- Script untuk autoplay setelah klik -->
+  <script>
+    document.addEventListener('click', function () {
+      const audio = document.getElementById('dance');
+      audio.play();
+    }, { once: true }); // hanya sekali, agar tidak diputar ulang tiap klik
+  </script>
 </body>
-  
 </html>
