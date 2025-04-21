@@ -4,27 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>THIS PROJECT UNDER WORK</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    #mainContent {
+      display: none;
+    }
+
+    #startBtn {
+      margin-top: 100px;
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <p>UNDER PROJECT, NIKMATI SAJA ANIMASI ROBLOX DIBAWAH INI</p>
-  <img src="image0.gif" alt="roblox">
 
-  <!-- Audio dengan loop -->
-  <audio id="dance" loop>
-    <source src="dance.mp3" type="audio/mpeg">
-    Browser tidak mendukung audio.
-  </audio>
+  <!-- Tombol awal -->
+  <button id="startBtn">Klik untuk Lanjut</button>
 
-  <footer>
-    ©ZevXB
-  </footer>
+  <!-- Konten utama -->
+  <div id="mainContent">
+    <p>UNDER PROJECT, NIKMATI SAJA ANIMASI ROBLOX DIBAWAH INI</p>
+    <img src="image0.gif" alt="roblox">
 
-  <!-- Script untuk autoplay setelah klik -->
+    <audio id="dance" loop>
+      <source src="dance.mp3" type="audio/mpeg">
+      Browser tidak mendukung audio.
+    </audio>
+
+    <footer>©ZevXB</footer>
+  </div>
+
   <script>
-    document.addEventListener('click', function () {
-      const audio = document.getElementById('dance');
+    const btn = document.getElementById('startBtn');
+    const content = document.getElementById('mainContent');
+    const audio = document.getElementById('dance');
+
+    btn.addEventListener('click', () => {
+      btn.style.display = 'none';
+      content.style.display = 'block';
       audio.play();
-    }, { once: true }); // hanya sekali, agar tidak diputar ulang tiap klik
+    });
   </script>
+
 </body>
 </html>
